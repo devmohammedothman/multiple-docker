@@ -2,11 +2,11 @@ sudo: required
 services:
     - docker
 
-before_install:
+before-install:
     - docker build -t devopsothman/multiple-docker -f ./client/Dockerfile.dev ./client 
 script:
     - docker run -e CI=true devopsothman/multiple-docker npm run test -- --coverage
-after_success:
+after-success:
     - docker build -t devopsothman/multiple-client ./client
     - docker build -t devopsothman/multiple-nginx ./nginx
     - docker build -t devopsothman/multiple-server ./server
