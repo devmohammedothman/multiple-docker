@@ -1,0 +1,22 @@
+DB instance identifier : multiple-docker-postgres
+user name : postgres
+password : postgrespassword
+db name : postgres
+multiple-docker-vpc-security-group
+
+postgres inbound rule source 196.221.2.53/32 port 5432 type PostgresSQL
+
+endpoint multiple-docker-postgres.ctayom6v2i7s.us-east-2.rds.amazonaws.com
+
+elastic cache redis
+**************************************
+id name : multiple-docker-redis
+
+redis endpoint :
+multiple-docker-redis.yzp1la.0001.use2.cache.amazonaws.com
+
+
+********************************************************
+travis access key for aws config ENV variables added on travis project settings
+AWS_ACCESS_KEY AKIA26PKGW6TE7GIC2U5
+AWS_SECRET_KEY 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

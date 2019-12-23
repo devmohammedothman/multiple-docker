@@ -18,3 +18,14 @@ after_success:
     - docker push devopsothman/multiple-nginx
     - docker push devopsothman/multiple-server
     - docker push devopsothman/multiple-worker
+deploy:
+    provider: elastickbeanstalk
+    region: "us-east-2"
+    app: "multiple-docker"
+    env: "MultipleDocker-env"
+    bucket_name: "elasticbeanstalk-us-east-2-752647321510"
+    bucket_path: "multiple-docker"
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
